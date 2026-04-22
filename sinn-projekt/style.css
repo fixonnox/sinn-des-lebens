@@ -1,0 +1,134 @@
+/* Grunddesign & Farben (Passend zum Flyer) */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #002b3d; /* Dein Dunkelblau */
+    color: #f7f1de;           /* Dein Beige */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+.content-img {
+    max-width: 100%;       /* Das Bild wird nie breiter als der Container */
+    height: auto;          /* Seitenverhältnis bleibt erhalten */
+    border-radius: 10px;   /* Macht die Ecken leicht rund – sieht edler aus! */
+    margin: 20px 0;        /* Abstand nach oben und unten */
+    display: block;        /* Sorgt dafür, dass es schön zentriert/sauber unter dem Text steht */
+}
+
+/* Die Navigation (Top-Bar wie im Wireframe) */
+.top-nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-nav a {
+    color: #f5f5dc;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.top-nav a:hover {
+    color: #c2dcff; /* Gold-Effekt beim Drüberfahren */
+}
+
+/* Der Header (Startseite mit Sonnenaufgang) */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(26, 58, 74, 0.6), rgba(26, 58, 74, 0.6)), 
+                url('img/sonnenaufgang.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+/* Video-Bereich */
+.video-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* Die neuen Video-Link-Kacheln */
+.video-link-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(245, 245, 220, 0.2);
+    border-radius: 12px;
+    text-decoration: none; /* Wichtig: Kein hässlicher blauer Link-Strich */
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.video-link-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px);
+    border-color: #f5f5dc;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Der Platzhalter oben (wo früher das Video war) */
+.video-preview-top {
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em; /* Das Play-Symbol schön groß */
+    color: #f5f5dc;
+}
+
+/* Text unter dem Kachel-Bild */
+.video-link-card p {
+    padding: 15px;
+    margin: 0;
+    color: #f5f5dc;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Stil für die Beschreibung unter dem Video */
+.video-container p {
+    padding: 15px;
+    margin: 0;
+    color: #f7f1de; /* Dein Beige */
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer {
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid #f5f5dc;
+}
